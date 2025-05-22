@@ -1,0 +1,24 @@
+.content-box {
+  background: #292929;
+  margin: 20px auto 0 auto;
+  padding: 40px 32px 20px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  max-width: 1800px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add extra space at the bottom of the page */
+body::after {
+  content: '';
+  display: block;
+  height: 20px;
+}
+
+.link {
+  color: #61dafb;
+}

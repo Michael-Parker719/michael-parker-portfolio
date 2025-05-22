@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #242424;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* Add separator between links except the last one */
+.navbar-links li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1.5rem;
+  background-color: #555;
+  margin-left: 2rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
