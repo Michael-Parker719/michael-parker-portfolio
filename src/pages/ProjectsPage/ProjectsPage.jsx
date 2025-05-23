@@ -8,7 +8,7 @@ import GitHubProjects from "../../components/GitHubProjects/GitHubProjects";
       <div className="ProjectsPage">
         <Navbar />
         <div className="content-box">
-          <h1 className="ProjectsPage-header">My GitHub Projects</h1>
+          <h1 className="header">My GitHub Projects</h1>
           <GitHubProjects />
         </div>
       </div>

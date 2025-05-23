@@ -1,0 +1,57 @@
+/* Container for the whole section */
+.github-projects-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Error message styling */
+.github-error {
+  color: red;
+}
+
+/* Flex container for project cards */
+.github-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual project card */
+.github-project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 280px;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Project link */
+.github-project-link {
+  text-decoration: none;
+  color: #61dafb;
+}
+
+/* Project title */
+.github-project-title {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Project avatar image */
+.github-project-avatar {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* Project description */
+.github-project-description {
+  font-size: 1rem;
+  min-height: 48px;
+}

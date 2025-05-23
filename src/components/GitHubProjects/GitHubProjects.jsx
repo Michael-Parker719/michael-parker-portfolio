@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./GitHubProjects.css";
+
 const GITHUB_USERNAME = "Michael-Parker719";
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
@@ -65,52 +67,30 @@ function GitHubProjects() {
   }, []);
 
   if (loading) return <div>Loading projects...</div>;
-  if (error) return <div style={{ color: "red" }}>{error}</div>;
+  if (error) return <div className="github-error">{error}</div>;
 
   return (
-    <div className="github-projects-container" style={{ maxWidth: 900, margin: "0 auto", padding: "2rem" }}>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "2rem",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <div className="github-projects-container">
+      <div className="github-projects-list">
         {repos.map(repo => (
           <div
             key={repo.id}
-            style={{
-              border: "1px solid #ddd",
-              borderRadius: 8,
-              padding: "1rem",
-              width: 280,
-              background: "#222",
-              color: "#fff",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
-            }}
+            className="github-project-card"
           >
             <a
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "#61dafb" }}
+              className="github-project-link"
             >
-              <h2 style={{ margin: "0 0 0.5rem 0" }}>{repo.name}</h2>
+              <h2 className="github-project-title">{repo.name}</h2>
             </a>
             <img
               src={repo.owner.avatarUrl}
               alt={repo.name}
-              style={{
-                width: "100%",
-                height: 120,
-                objectFit: "cover",
-                borderRadius: 4,
-                marginBottom: "0.5rem"
-              }}
+              className="github-project-avatar"
             />
-            <p style={{ fontSize: "1rem", minHeight: 48 }}>
+            <p className="github-project-description">
               {repo.description || "No description provided."}
             </p>
           </div>
