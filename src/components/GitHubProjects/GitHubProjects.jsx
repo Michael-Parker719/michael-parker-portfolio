@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// Tests
 const GITHUB_USERNAME = "Michael-Parker719";
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
